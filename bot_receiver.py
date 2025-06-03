@@ -24,7 +24,7 @@ async def check_queue():
         message = get_messages_from_rabbitmq()
         if message:
             await bot.send_message(chat_id=chat_id, text=f"Викладач {message} почав віддалену пару")
-        await asyncio.sleep(15 * 60)  # кожні 15 хвилин
+        await asyncio.sleep(30)  # кожні 30 secynd
 
 # Запуск
 if __name__ == '__main__':
