@@ -1,9 +1,10 @@
+# Lab7ReceiverBot – перевіряє чергу та надсилає повідомлення
 import pika
 import asyncio
 from telegram import Bot
 
-bot_token = "ТВОКЕН_ТУТ"
-chat_id = "ID_КОРИСТУВАЧА_ТУТ"  # Отримай його вручну або через бота
+bot_token = "7560158248:AAF2WtTCAKiwF3uHQtKuMSMw2cKqIn-uXuk"
+chat_id = "ID_КОРИСТУВАЧА_ТУТ"  # заміни на свій реальний chat_id
 
 bot = Bot(token=bot_token)
 
@@ -27,5 +28,5 @@ async def check_queue():
 
 # Запуск
 if __name__ == '__main__':
-    print("Bot No2 is running...")
+    print("Lab7ReceiverBot is running...")
     asyncio.run(check_queue())
