@@ -1,6 +1,7 @@
+# RemoteLectureBot – надсилає повідомлення в RabbitMQ
 import pika
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
+from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 
 # Функція надсилання повідомлення в RabbitMQ
 def send_to_rabbitmq(username, text):
@@ -20,9 +21,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Запуск Telegram-бота
 if __name__ == '__main__':
-    app = ApplicationBuilder().token("ТВОКЕН_ТУТ").build()
+    app = ApplicationBuilder().token("7606943719:AAGYjc6qP-3-k6tcMJrVFk1RFUXGF2tyLTw").build()
 
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    print("Bot No1 is running...")
+    print("RemoteLectureBot is running...")
     app.run_polling()
