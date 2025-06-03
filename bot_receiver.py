@@ -4,7 +4,7 @@ import asyncio
 from telegram import Bot
 
 bot_token = "7560158248:AAF2WtTCAKiwF3uHQtKuMSMw2cKqIn-uXuk"
-chat_id = "ID_КОРИСТУВАЧА_ТУТ"  # заміни на свій реальний chat_id
+chat_id = "1008720046"  # заміни на свій реальний chat_id
 
 bot = Bot(token=bot_token)
 
